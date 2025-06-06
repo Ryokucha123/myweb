@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Resume - ฐิติมา แก้วไชยะ</title>
+  <title>Resume - [ฐิติมา แก้วไชยะ]</title>
   <style>
     :root {
       --bg: #ffffff;
@@ -28,17 +28,6 @@
       transition: 0.3s ease;
     }
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
     .theme-toggle {
       position: fixed;
       top: 1rem;
@@ -49,6 +38,48 @@
       border-radius: 20px;
       padding: 0.5rem 1rem;
       cursor: pointer;
+      z-index: 10;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--accent);
+    }
+
+    .intro {
+      flex: 1;
+    }
+
+    .intro h1 {
+      margin: 0 0 0.5rem;
+      color: var(--accent);
+    }
+
+    .resume-download {
+      display: inline-block;
+      margin-top: 0.8rem;
+      padding: 0.6rem 1.2rem;
+      background-color: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
     }
 
     .section {
@@ -59,19 +90,9 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    h1, h2 {
+    h2 {
       margin-top: 0;
       color: var(--accent);
-    }
-
-    a.resume-download {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.6rem 1.2rem;
-      background-color: var(--accent);
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
     }
 
     ul {
@@ -79,8 +100,10 @@
     }
 
     @media (max-width: 600px) {
-      .container {
-        padding: 1rem;
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
       .theme-toggle {
         top: 0.5rem;
@@ -95,15 +118,18 @@
 
   <div class="container">
     <header>
-      <h1>[ชื่อ-นามสกุล]</h1>
-      <p>[ตำแหน่ง/อาชีพ เช่น Web Developer | UX/UI Designer]</p>
-      <a href="resume.pdf" class="resume-download" download>📄 ดาวน์โหลดเรซูเม่ (PDF)</a>
+      <img src="your-photo.jpg" alt="รูปโปรไฟล์" class="profile-pic" />
+      <div class="intro">
+        <h1>[ฐิติมา แก้วไชยะ]</h1>
+        <p>[เรียนอยู่ที่ราชภัฎเลย]</p>
+        <a href="resume.pdf" class="resume-download" download>📄 ดาวน์โหลดเรซูเม่ (PDF)</a>
+      </div>
     </header>
 
     <div class="section">
-      <h2>ข้อมูลส่วนตัว</h2>
-      <p><strong>ที่อยู่:</strong> กรุงเทพฯ, ประเทศไทย</p>
-      <p><strong>โทร:</strong> 081-xxx-xxxx</p>
+      <h2>ข้อมูลติดต่อ</h2>
+      <p><strong>ที่อยู่:</strong> เลย</p>
+      <p><strong>โทร:</strong> 098-xxx-xxxx</p>
       <p><strong>Email:</strong> your@email.com</p>
       <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourname" target="_blank">linkedin.com/in/yourname</a></p>
     </div>
@@ -112,14 +138,14 @@
       <h2>ประสบการณ์ทำงาน</h2>
       <ul>
         <li><strong>Frontend Developer</strong> – ABC Tech (2023 - ปัจจุบัน)</li>
-        <li><strong>Intern UX Designer</strong> – XYZ Design Studio (2022)</li>
+        <li><strong>Intern UX Designer</strong> – XYZ Studio (2022)</li>
       </ul>
     </div>
 
     <div class="section">
       <h2>การศึกษา</h2>
       <ul>
-        <li><strong>ปริญญาตรี</strong> – วิศวกรรมคอมพิวเตอร์, มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าฯ (2020 - 2024)</li>
+        <li><strong>ปริญญาตรี</strong> –.....</li>
         <li><strong>มัธยมปลาย</strong> – โรงเรียนชื่อดังแห่งหนึ่ง</li>
       </ul>
     </div>
@@ -128,18 +154,17 @@
       <h2>ทักษะ</h2>
       <ul>
         <li>HTML, CSS, JavaScript</li>
-        <li>React, TailwindCSS, Bootstrap</li>
-        <li>Figma, Adobe XD</li>
-        <li>ภาษาอังกฤษระดับดี (TOEIC 800+)</li>
+        <li>React, TailwindCSS</li>
+        <li>Figma, UX/UI Design</li>
       </ul>
     </div>
 
     <div class="section">
-      <h2>ความสนใจเพิ่มเติม</h2>
+      <h2>ความสนใจ</h2>
       <ul>
         <li>ออกแบบ UI</li>
-        <li>เขียนบล็อกด้านเทคโนโลยี</li>
-        <li>อ่านหนังสือ Self-Development</li>
+        <li>สร้างเว็บแอป</li>
+        <li>พัฒนาตัวเองและอ่านหนังสือ</li>
       </ul>
     </div>
   </div>
