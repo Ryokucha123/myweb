@@ -1,78 +1,53 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>แนะนำตัว - [ชื่อของคุณ]</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เว็บไซต์ส่วนตัว</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #f8f9fa, #e9ecef);
+      font-family: 'Sarabun', sans-serif;
+      background-color: #f4f4f4;
       margin: 0;
       padding: 0;
-      color: #333;
     }
-    header {
-      background-color: #343a40;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
+
+    .container {
+      max-width: 700px;
+      margin: 100px auto;
       background-color: white;
-      border-radius: 10px;
+      padding: 40px;
+      border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      color: #212529;
-    }
-    img.profile {
-      width: 150px;
-      border-radius: 50%;
-      display: block;
-      margin: 0 auto 1rem;
-    }
-    footer {
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #6c757d;
     }
-    @media (max-width: 600px) {
-      main {
-        margin: 1rem;
-      }
+
+    h1 {
+      color: #333;
+      font-size: 36px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      margin: 10px 0;
+    }
+
+    .email {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #0066cc;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>ฐิติมา แก้วไชยะ</h1>
-    <p>เว็บไซต์แนะนำตัวส่วนตัว</p>
-  </header>
 
-  <main>
-    <img src="your-photo.jpg" alt="รูปของคุณ" class="profile" />
-    <h2>เกี่ยวกับฉัน</h2>
-    <p>สวัสดีครับ/ค่ะ! ฉันชื่อ ฐิติมา แก้วไชยะ ตอนนี้ฉันเป็น นักศึกษา</p>
+  <div class="container">
+    <h1>สวัสดีครับ ผมชื่อ [ชื่อของคุณ]</h1>
+    <p>อาชีพ: [เช่น นักพัฒนาเว็บ, นักออกแบบกราฟิก, นักเรียน ฯลฯ]</p>
+    <p class="email">อีเมล: yourname@example.com</p>
+  </div>
 
-    <h2>ทักษะ</h2>
-    <ul>
-      <li>HTML / CSS / JavaScript</li>
-      <li>ออกแบบ UX/UI</li>
-      <li>ภาษาอังกฤษระดับดี</li>
-    </ul>
-
-    <h2>ติดต่อฉัน</h2>
-    <p>Email: your@email.com</p>
-    <p>Facebook: <a href="https://facebook.com/yourprofile" target="_blank">facebook.com/yourprofile</a></p>
-  </main>
-
-  <footer>
-    &copy; 2025 [ชื่อของคุณ]. สงวนลิขสิทธิ์
-  </footer>
 </body>
 </html>
+
