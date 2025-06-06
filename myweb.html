@@ -1,53 +1,153 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>เว็บไซต์ส่วนตัว</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume - [ชื่อของคุณ]</title>
   <style>
+    :root {
+      --bg: #ffffff;
+      --text: #333;
+      --card: #f9f9f9;
+      --accent: #007bff;
+    }
+
+    body.dark-mode {
+      --bg: #121212;
+      --text: #f1f1f1;
+      --card: #1e1e1e;
+      --accent: #0d6efd;
+    }
+
     body {
-      font-family: 'Sarabun', sans-serif;
-      background-color: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: 0.3s ease;
     }
 
     .container {
-      max-width: 700px;
-      margin: 100px auto;
-      background-color: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    header {
       text-align: center;
+      margin-bottom: 2rem;
     }
 
-    h1 {
-      color: #333;
-      font-size: 36px;
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
     }
 
-    p {
-      font-size: 18px;
-      color: #555;
-      margin: 10px 0;
+    .section {
+      background-color: var(--card);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    .email {
-      margin-top: 20px;
-      font-weight: bold;
-      color: #0066cc;
+    h1, h2 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    a.resume-download {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem;
+      }
+      .theme-toggle {
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 <body>
+  <button class="theme-toggle" onclick="toggleTheme()">🌓 สลับธีม</button>
 
   <div class="container">
-    <h1>สวัสดีครับ ผมชื่อ [ชื่อของคุณ]</h1>
-    <p>อาชีพ: [เช่น นักพัฒนาเว็บ, นักออกแบบกราฟิก, นักเรียน ฯลฯ]</p>
-    <p class="email">อีเมล: yourname@example.com</p>
+    <header>
+      <h1>[ชื่อ-นามสกุล]</h1>
+      <p>[ตำแหน่ง/อาชีพ เช่น Web Developer | UX/UI Designer]</p>
+      <a href="resume.pdf" class="resume-download" download>📄 ดาวน์โหลดเรซูเม่ (PDF)</a>
+    </header>
+
+    <div class="section">
+      <h2>ข้อมูลส่วนตัว</h2>
+      <p><strong>ที่อยู่:</strong> กรุงเทพฯ, ประเทศไทย</p>
+      <p><strong>โทร:</strong> 081-xxx-xxxx</p>
+      <p><strong>Email:</strong> your@email.com</p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourname" target="_blank">linkedin.com/in/yourname</a></p>
+    </div>
+
+    <div class="section">
+      <h2>ประสบการณ์ทำงาน</h2>
+      <ul>
+        <li><strong>Frontend Developer</strong> – ABC Tech (2023 - ปัจจุบัน)</li>
+        <li><strong>Intern UX Designer</strong> – XYZ Design Studio (2022)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>การศึกษา</h2>
+      <ul>
+        <li><strong>ปริญญาตรี</strong> – วิศวกรรมคอมพิวเตอร์, มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าฯ (2020 - 2024)</li>
+        <li><strong>มัธยมปลาย</strong> – โรงเรียนชื่อดังแห่งหนึ่ง</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>ทักษะ</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>React, TailwindCSS, Bootstrap</li>
+        <li>Figma, Adobe XD</li>
+        <li>ภาษาอังกฤษระดับดี (TOEIC 800+)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>ความสนใจเพิ่มเติม</h2>
+      <ul>
+        <li>ออกแบบ UI</li>
+        <li>เขียนบล็อกด้านเทคโนโลยี</li>
+        <li>อ่านหนังสือ Self-Development</li>
+      </ul>
+    </div>
   </div>
 
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </body>
 </html>
-
